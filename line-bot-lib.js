@@ -2,6 +2,7 @@ const CHANNEL_ID='1476981144';
 const CHANNEL_SECRET='fcd097f1c98ef66af13341fc8b7f7f4a';
 const MID='u93e310868fe8f27049eec00dea8d3751';
 const LINE_API='https://api.line.me/v1/events';
+const request=require('request');
 
 exports.sendTextMessage=function sendTextMessage(sender, text) {
 
