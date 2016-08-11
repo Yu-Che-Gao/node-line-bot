@@ -1,10 +1,11 @@
 const express = require('express');
-const bodyParser=require('body-parser');
+const bodyParser = require('body-parser');
 const app = express();
 const lineBotLib = require('./line-bot-lib.js');
 const port = process.env.PORT || 80;
 
-app.use(express.bodyParser());
+app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.json());
 app.get('/', (req, res) => { res.send('you have no right to access this page.') });
 app.post('/callback', (req, res) => {
     const result = req.body.result;
