@@ -1,5 +1,6 @@
 const express = require('express');
 const bodyParser = require('body-parser');
+const request=require('request');
 const app = express();
 const lineBotLib = require('./line-bot-lib.js');
 const port = process.env.PORT || 80;
